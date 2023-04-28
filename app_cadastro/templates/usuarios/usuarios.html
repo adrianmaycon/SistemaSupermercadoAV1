@@ -1,0 +1,27 @@
+{% extends 'usuarios/base.html' %}
+{% block conteudo %}
+<div class="container">
+    <br>
+    <table class="table table-striped">
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>E-mail</th>
+            <th>Endereço</th>
+            <th>Telefone</th>
+        </tr>
+        {% for cliente in clientes %}
+        <tr>
+            <td>{{cliente.id_cliente}}</td>
+            <td>{{cliente.nome}}</td>
+            <td>{{cliente.cpf}}</td>
+            <td>{{cliente.email}}</td>
+            <td>{{cliente.endereco}}</td>
+            <td>{{cliente.fone}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}
+

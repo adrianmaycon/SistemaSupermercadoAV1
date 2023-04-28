@@ -1,0 +1,39 @@
+
+{% extends 'usuarios/base.html' %}
+{% block conteudo %}
+<form action="{% url 'listagem_clientes' %}" method="post">
+    {% csrf_token %}
+    <div style="text-align:center;" class="container">
+        <center>
+            <div class="form-group col-md-4">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" class="form-control" placeholder="Nome">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="cpf">CPF</label>
+                <input type="text" name="cpf" class="form-control" placeholder="CPF">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" class="form-control" placeholder="E-mail">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="endereco">Endereço</label>
+                <input type="text" name="endereco" class="form-control" placeholder="Endereço">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="fone">Telefone</label>
+                <input type="text" class="form-control" name="fone" placeholder="(##)#####-####">
+            </div><br>
+            <button class="btn btn-primary">Enviar</button>
+        </center>
+   </div>
+           <!-- <h1>Cadastro de cliente</h1>
+        Nome: <input name="nome" class="form-control-sm" type="text">
+        CPF: <input name="cpf" class="form-control-sm" type="text"><br><br>
+        E-mail: <input name="email" class="form-control-sm" type="text">
+        Endereço: <input name="endereco" class="form-control-sm" type="text"><br><br>
+        Telefone: <input name="fone" class="form-control-sm" type="text">
+        <button class="btn btn-primary">Enviar</button> -->
+</form>
+{% endblock %}
